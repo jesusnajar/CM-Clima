@@ -9,15 +9,26 @@
 #import <UIKit/UIKit.h>
 #import "Declarations.h"
 #import "Parser.h"
+#import <CoreLocation/CoreLocation.h>
+#import <GoogleMaps/GoogleMaps.h>
 
-@interface Start : UIViewController
+#import <Google/Analytics.h>
+
+
+@interface Start : UIViewController<CLLocationManagerDelegate>
+
+
+
+@property (strong, nonatomic)   CLLocationManager   *locationManager;
+@property (strong, nonatomic)   CLLocation          *location;
+
+
 
 @property (nonatomic,strong)    Declarations            *Declarations;
 @property (nonatomic,strong)    Parser                  *Parser;
 
 
-//Table
-@property (strong, nonatomic) IBOutlet UITableView *tblMain;
+
 
 //labels
 @property (strong, nonatomic) IBOutlet UILabel *lblTemp;

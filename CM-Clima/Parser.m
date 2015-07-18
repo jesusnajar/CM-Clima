@@ -19,6 +19,7 @@
         mstPressure = [[main valueForKey: @"pressure"]stringValue];
         mstTempMax  = [[main valueForKey: @"temp_max"]stringValue];
         mstTempMin  = [[main valueForKey: @"temp_min"]stringValue];
+       
     }
 }
 
